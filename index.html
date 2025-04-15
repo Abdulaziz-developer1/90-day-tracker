@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>90-Day Fit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💪 90-Day Fit Tracker</h1>
+
+    <div class="day-select">
+      <label for="day">Select Day:</label>
+      <input type="number" id="day" min="1" max="90" value="1" />
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item" data-task="workout">
+        <button class="accordion-header">🏋️ Workout</button>
+        <div class="accordion-content">
+          <p>Track each exercise you complete today:</p>
+          <label><input type="checkbox" class="subtask" data-subtask="pushups" /> Push-ups</label>
+          <label><input type="checkbox" class="subtask" data-subtask="pullups" /> Pull-ups</label>
+          <label><input type="checkbox" class="subtask" data-subtask="squats" /> Squats</label>
+          <label><input type="checkbox" class="subtask" data-subtask="plank" /> Plank</label>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-task="meals">
+        <button class="accordion-header">🍽️ Meals & Snacks</button>
+        <div class="accordion-content">
+          <p>3 meals + 2 snacks. Don’t skip breakfast or milk at night!</p>
+          <label><input type="checkbox" class="subtask" data-subtask="meals-done" /> Meals completed</label>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-task="sleep">
+        <button class="accordion-header">🛌 Sleep</button>
+        <div class="accordion-content">
+          <p>Minimum 8 hours sleep. Night milk helps recovery!</p>
+          <label><input type="checkbox" class="subtask" data-subtask="sleep-done" /> Slept 8+ hours</label>
+        </div>
+      </div>
+    </div>
+
+    <button id="saveBtn">💾 Save Day</button>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
